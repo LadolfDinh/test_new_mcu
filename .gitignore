@@ -1,0 +1,59 @@
+# ===== Bí mật (mật khẩu WiFi...) - KHÔNG đẩy lên GitHub =====
+secrets.h
+.env
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== STM32 - Keil MDK-ARM (file sinh ra khi build / file riêng từng máy) =====
+testNewBrain/MDK-ARM/testNewBrain/
+testNewBrain/MDK-ARM/build_log.txt
+*.uvguix.*
+*.bak
+*.dep
+*.lst
+*.o
+*.d
+*.crf
+*.axf
+*.htm
+*.lnp
+*.map
+*.sct.bak
+JLinkLog.txt
+JLinkSettings.ini
+
+# STM32 - phần CMSIS mà project KHÔNG dùng (CubeMX chép thừa, ~17 MB).
+# Keil chỉ cần Drivers/STM32F4xx_HAL_Driver, CMSIS/Include, CMSIS/Core, CMSIS/Device.
+testNewBrain/Drivers/CMSIS/DSP/
+testNewBrain/Drivers/CMSIS/NN/
+testNewBrain/Drivers/CMSIS/DAP/
+testNewBrain/Drivers/CMSIS/RTOS/
+testNewBrain/Drivers/CMSIS/RTOS2/
+testNewBrain/Drivers/CMSIS/Core_A/
+
+# ===== Mô phỏng MuJoCo - file tạm khi biên dịch firmware cho PC =====
+# Giữ lại build/fw_sim.dll + .stamp (bản dựng sẵn cho máy không có trình biên dịch C)
+sim_mujoco/build/*
+!sim_mujoco/build/fw_sim.dll
+!sim_mujoco/build/fw_sim.dll.stamp
+
+# ===== pc_monitor - log chạy thực tế (app tự tạo lại thư mục logs/) =====
+pc_monitor/logs/
+
+# ===== Bản sao lưu cũ (đã có lịch sử git thay thế; file vẫn còn trên máy) =====
+_backup*/
+**/_backup*/
+testNewBrain/Claude outputs/
+*_truoc_*.ino.txt
+
+# ===== Hệ điều hành / IDE =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/

@@ -1,0 +1,16 @@
+# Chuẩn hoá xuống dòng trong repo; Keil/CubeMX trên Windows vẫn nhận CRLF khi checkout
+* text=auto
+
+# File Keil / CubeMX / Windows giữ CRLF
+*.uvprojx text eol=crlf
+*.uvoptx  text eol=crlf
+*.ioc     text eol=crlf
+*.bat     text eol=crlf
+*.s       text eol=crlf
+
+# Nhị phân
+*.dll  binary
+*.png  binary
+*.jpg  binary
+*.mp4  binary
+*.pdf  binary
